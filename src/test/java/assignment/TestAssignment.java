@@ -58,7 +58,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
                             //var scopedClass = getScopedClass().getSuperclass();
-                            assertTrue(classInheritsFrom(findClass(BallFQCN).get())); //Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -72,7 +72,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -86,7 +86,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -100,7 +100,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -114,7 +114,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Equipment.class));
+                            assertTrue(classInheritsFrom(findClass(EquFQCN).get()));
 
                         }
                 );
@@ -128,7 +128,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Equipment.class));
+                            assertTrue(classInheritsFrom(findClass(EquFQCN).get()));
 
                         }
                 );
