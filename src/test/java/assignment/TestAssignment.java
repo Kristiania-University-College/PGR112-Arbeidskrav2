@@ -57,8 +57,8 @@ public class TestAssignment extends BaseAssignment
                         "Har du husket å bruke arv?"
                         ,
                         () -> {
-
-                            assertTrue(classInheritsFrom(Ball.class));
+                            //var scopedClass = getScopedClass().getSuperclass();
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get())); //Ball.class));
 
                         }
                 );
@@ -152,7 +152,7 @@ public class TestAssignment extends BaseAssignment
                         () -> {
 
                             try {
-                                var shape = classCreateInstance();
+                                var bal = classCreateInstance();
                                 fail();
                             }
                             catch (Exception e){
@@ -176,7 +176,7 @@ public class TestAssignment extends BaseAssignment
                         () -> {
 
                             try {
-                                var shape = classCreateInstance();
+                                var equi = classCreateInstance();
                                 fail();
                             }
                             catch (Exception e){
