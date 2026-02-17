@@ -107,8 +107,8 @@ Hvis du opplever vesentlige utfordringer og ikke klarer å komme i mål: Lever d
 
 ## Tips og teknisk informasjon
 
-> Som hjelp har vi lagret tests for oppgave 1 og oppgave 2. For at GitHub classroom klarer å utføre disse testene automatisk er det viktig at du skriver koden nøyaktig slik som det står i oppgave beskrivelsen - samt stor og småbokstaver og i **riktig mappe**
+> Som hjelp har vi lagret tests for alle oppgavene. For at GitHub classroom klarer å utføre disse testene automatisk er det viktig at du skriver koden **nøyaktig slik** som det står i oppgave beskrivelsen - samt stor og småbokstaver og i **riktig mappe**
 
-> Merk at testene er kun tenkt som støtte. 
-> Hver gang du pusher opp koden din, blir det kjørt testene.
+> Merk at testene er **kun tenkt som støtte**.
+> Hver gang du pusher opp koden din, blir det kjørt testene i GitHub Classroom.
 
