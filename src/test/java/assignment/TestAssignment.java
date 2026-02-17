@@ -9,8 +9,7 @@ import org.junitpioneer.jupiter.DisableIfTestFails;
 
 import studio.programkode.jatf.java25.BaseAssignment;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 import static studio.programkode.jatf.java25.Framework.*;
 
 
@@ -229,11 +228,50 @@ public class TestAssignment extends BaseAssignment
 
 
             classInstanceInvokeMethod(nc, "main");
-            var norwegianText = "hei";
 
-            // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
-            assertStandardOutputEquals(norwegianText);
+            String sOut = "%s".formatted(
+                                    getStandardOutput()
+                                            .toLowerCase()
+                                            .replaceAll("\\s+", ""));
+
+            var testText = "needmoreair";
+            assertTrue(sOut.contains(testText)
+            );
+
+            String[] splitSO = sOut.split(testText);
+
+            testText = "volleyball21";
+            assertTrue(splitSO[0].contains(testText));
+
+            testText = "needtobereplaced";
+            assertTrue(splitSO[1].contains(testText)
+            );
+
+            String[] splitS1 = splitSO[1].split(testText);
+
+            testText = "basketball34";
+            assertTrue(splitS1[0].contains(testText));
+
+            testText = "tabletennisracket17";
+            assertTrue(splitS1[1].contains(testText));
+
+            testText = "neednewpad";
+            assertTrue(splitS1[1].contains(testText)
+            );
+
+
+
         });
+    }
+    static public void assertStandardOutputEqualsSpecial(String input) {
+      assertTrue(
+                "%s".formatted(
+                        getStandardOutput()
+                                .toLowerCase()
+                                .replaceAll("\\s+", ""))
+                                .contains(input)
+                );
+
     }
 
 

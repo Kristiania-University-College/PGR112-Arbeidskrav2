@@ -58,12 +58,25 @@ Du vil trenge denne metoden som returnerer objektene (lest fra fil) i neste oppg
 Lag en klasse `Maintenance` som tilbyr tre public metoder:
 
  - `printBallsNeedingMoreAir()`: Metoden skal skrive ut informasjon om hvilke baller som trenger å pumpes opp.
+Du skal skrive ut informasjon som en oppføring i formatet
+"<_Objekt_> <_Id_> ... _need more air_", 
+for eksempel: "Fotball 12, Basketball 33, ...  need more air"
+
+
  - `printEquipmentNeedingToBeReplaced()`: Metoden skal skrive ut informasjon om hvilket utstyr som må erstattes.
+   Du skal skrive ut informasjon som en oppføring i formatet
+   "<_Objekt_> <_Id_> ... _need to be replaced_",
+   for eksempel: "Handball 15, TableTennisRacket 17, ...  need to be replaced"
+
+
  - `printTableTennisRacketsNeedingNewPad()`: Metoden skal skrive ut hvilke bordtennisracketer som må skifte belegg.
+ - Du skal skrive ut informasjon som en oppføring i formatet
+   "<_Objekt_> <_Id_> ... _need new pad_",
+
 
 Metodene skal bruke objektene lest inn fra fil for å utføre handlingen sin. 
 
-**Det er forventet at du enten benytter aggregering.**
+**Det er forventet at du benytter aggregering.**
 
 Det er derfor forventet at du benytter klassen du lagde i oppgave 1 for å lese inn informasjon om utstyret før metodene kalles.
 
@@ -72,7 +85,7 @@ Det er derfor forventet at du benytter klassen du lagde i oppgave 1 for å lese 
 
 ## Oppgave 3:
 
-Lag en klasse `MaintenanceTest` med metoden `public void main()` som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene beskrevet i oppgave 2.
+Lag en klasse `MaintenanceTest` med metoden `public void main()` som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene i samme rekkefølge som beskrevet i oppgave 2.
 
 ---
 
