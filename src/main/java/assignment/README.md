@@ -1,3 +1,101 @@
-# Assignment Text
+### Oppgaven:
 
-> All tasks are completed within this `assignment`-package
+En engelsk gymlærer ved en barneskole i Norge har sett seg veldig lei på å ikke ha kontroll på sportsutstyret som benyttes i undervisningen. Hun planlegger derfor å få orden på dette. Prosjektet er i gang. I første omgang har hun prioritert å få kontroll på baller og bordtennisracketer. Disse blir stadig borte, og de trenger en del vedlikehold. Baller trenger stadig påfyll av luft, og bordtennisracketene trenger å få skiftet belegget på utsiden av racketen. Det er planlagt å innlemme flere typer sportsutstyr etter hvert.
+
+Hun har nå gitt alle baller og bordtennisracketer en unik id (tegnet direkte på ballen/racketen). Hun har også fått satt inn noen skap der disse skal oppbevares. Hun har laget en liste (equipment.txt) som inneholder informasjon om alt sportsutstyret (ballene og bordtennisracketene). Sportsutstyret i gymlærerens system har en del felles egenskaper:
+
+En unik id
+En plassering som angir i hvilket skap ballen/racketen skal oppbevares
+Informasjon om utstyret må erstattes (fordi det er ødelagt eller mistet)
+For baller ønsker hun å lagre hva slags type ball det er snakk om (fot-, hånd-, basket- eller volleyball). Hun vil også vite om ballen trenger påfyll av mer luft – altså trenger å pumpes opp.
+
+For bordtennisracketer ønsker hun å vite om racketen trenger å skifte belegg.
+
+Som du ser av inventarlisten (`files/equipment.txt`), så er all denne informasjonen nå registrert i en fil. Her er et utdrag fra equipment.txt med forklaring til de ulike linjene i filen:
+
+Ball → Hva slags type utstyr, i dette tilfellet er det snakk om en ball
+
+12 → Id
+
+Locker 1 → Hvor dette utstyret skal oppbevares
+
+false → Om ballen må skiftes ut
+
+Football → Hva slags type ball
+
+true → Om ballen trenger mer luft
+
+TableTennisRacket → Hva slags type utstyr, i dette tilfellet er det snakk om en bordtennisracket
+
+16 → Id
+
+Locker 5 → Hvor dette utstyret skal oppbevares
+
+false → Om bordtennisracketen må skiftes ut
+
+false → Om bordtennisracketen trenger nytt belegg
+
+
+Koden din skal ligge i form av java-filer i `src/main/java/assignment` folderen. 
+Du kan bruke testene i `src/test/java/assignment/TestAssignment.java` folderen for å teste løsningen din underveis.
+
+---
+
+## Oppgave 1:
+
+Lag en klasse `Inventory` som har som ansvar å kunne lese utstyr-informasjon fra fil `files/equipment.txt`. Ved lesing fra fil skal det opprettes objekter som representerer ballene og bordtennisracketene. 
+
+Klassen skal inkludere en public metode `returnAllEquipments()` som kan returnere objektene lest inn fra fil. Du må selv finne ut hvilke klasser du må lage for å kunne representere ballene og bordtennisracketene. 
+
+**Det er forventet at du benytter arv.**
+
+Du vil trenge denne metoden som returnerer objektene (lest fra fil) i neste oppgave.
+
+---
+
+## Oppgave 2:
+
+Lag en klasse `Maintenance` som tilbyr tre public metoder:
+
+ - `printBallsNeedingMoreAir()`: Metoden skal skrive ut informasjon om hvilke baller som trenger å pumpes opp.
+ - `printEquipmentNeedingToBeReplaced()`: Metoden skal skrive ut informasjon om hvilket utstyr som må erstattes.
+ - `printTableTennisRacketsNeedingNewPad()`: Metoden skal skrive ut hvilke bordtennisracketer som må skifte belegg.
+
+Metodene skal bruke objektene lest inn fra fil for å utføre handlingen sin. 
+
+**Det er forventet at du enten benytter aggregering.**
+
+Det er derfor forventet at du benytter klassen du lagde i oppgave 1 for å lese inn informasjon om utstyret før metodene kalles.
+
+
+---
+
+## Oppgave 3:
+
+Lag et program som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene beskrevet i oppgave 2.
+
+---
+
+## Formkrav
+
+I pull __request -> feedback__: Legg inn kommentar som beskriver ditt arbeid med oppgaven. Du kan også legge inn kommentarer i koden på den samme måten som du allerede gjorde i arbeidskrav 1. 
+- Hvordan startet du? 
+- Dukket det opp noen utfordringer underveis? 
+- Er det noen kjente begrensninger? 
+- Er det visse deler av løsningen din du gjerne vil ha tilbakemelding på?
+
+Det er ikke et krav at løsningen din skal fungere 100 % riktig for å få godkjent. 
+
+Hvis du opplever vesentlige utfordringer og ikke klarer å komme i mål: Lever det du har fått til, og beskriv utfordringene dine. Da kan du få hjelp av en medstudent gjennom tilbakemelding.
+
+
+
+---
+
+## Tips og teknisk informasjon
+
+> Som hjelp har vi lagret tests for oppgave 1 og oppgave 2. For at GitHub classroom klarer å utføre disse testene automatisk er det viktig at du skriver koden nøyaktig slik som det står i oppgave beskrivelsen - samt stor og småbokstaver og i **riktig mappe**
+
+> Merk at testene er kun tenkt som støtte. 
+> Hver gang du pusher opp koden din, blir det kjørt testene.
+
