@@ -57,8 +57,8 @@ public class TestAssignment extends BaseAssignment
                         "Har du husket å bruke arv?"
                         ,
                         () -> {
-
-                            assertTrue(classInheritsFrom(Ball.class));
+                            //var scopedClass = getScopedClass().getSuperclass();
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -72,7 +72,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -86,7 +86,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -100,7 +100,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Ball.class));
+                            assertTrue(classInheritsFrom(findClass(BallFQCN).get()));
 
                         }
                 );
@@ -114,7 +114,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Equipment.class));
+                            assertTrue(classInheritsFrom(findClass(EquFQCN).get()));
 
                         }
                 );
@@ -128,7 +128,7 @@ public class TestAssignment extends BaseAssignment
                         ,
                         () -> {
 
-                            assertTrue(classInheritsFrom(Equipment.class));
+                            assertTrue(classInheritsFrom(findClass(EquFQCN).get()));
 
                         }
                 );
@@ -152,7 +152,7 @@ public class TestAssignment extends BaseAssignment
                         () -> {
 
                             try {
-                                var shape = classCreateInstance();
+                                var bal = classCreateInstance();
                                 fail();
                             }
                             catch (Exception e){
@@ -176,7 +176,7 @@ public class TestAssignment extends BaseAssignment
                         () -> {
 
                             try {
-                                var shape = classCreateInstance();
+                                var equi = classCreateInstance();
                                 fail();
                             }
                             catch (Exception e){
