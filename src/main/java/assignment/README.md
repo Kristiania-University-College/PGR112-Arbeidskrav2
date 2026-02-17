@@ -72,7 +72,7 @@ Det er derfor forventet at du benytter klassen du lagde i oppgave 1 for å lese 
 
 ## Oppgave 3:
 
-Lag et program som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene beskrevet i oppgave 2.
+Lag en klasse `MaintenanceTest` med metoden `public void main()` som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene beskrevet i oppgave 2.
 
 ---
 

@@ -29,6 +29,7 @@ public class TestAssignment extends BaseAssignment
         static private final String EquFQCN = "assignment.Equipment";
         static private final String InvFQCN = "assignment.Inventory";
         static private final String MainFQCN = "assignment.Maintenance";
+        static private final String MTFQCN = "assignment.MaintenanceTest";
 
         //private final PrintStream originalOut = System.out;
 
@@ -215,6 +216,25 @@ public class TestAssignment extends BaseAssignment
 
             });
         }
+
+    @DisplayName("Oppgave #3 - test av oppretting av maintenance klasse og bruk av aggregering")
+    @Order(4)
+    @Test()
+    public void oppgave31() {
+        // Code that tests assignment goes here
+
+        testClass(MTFQCN, () -> {
+
+            var nc = classCreateInstance();
+
+
+            classInstanceInvokeMethod(nc, "main");
+            var norwegianText = "hei";
+
+            // tester sout , tillatter upper og lower cases, med og uten "og", med og uten whitespaces
+            assertStandardOutputEquals(norwegianText);
+        });
+    }
 
 
 

@@ -74,7 +74,9 @@ false → Om bordtennisracketen trenger nytt belegg
 
 Lag en klasse `Inventory` som har som ansvar å kunne lese utstyr-informasjon fra fil `files/equipment.txt`. Ved lesing fra fil skal det opprettes objekter som representerer ballene og bordtennisracketene.
 
-Klassen skal inkludere en public metode `returnAllEquipments` som kan returnere objektene lest inn fra fil. Du må selv finne ut hvilke klasser du må lage for å kunne representere ballene og bordtennisracketene. Det er forventet at du benytter arv.
+Klassen skal inkludere en public metode `returnAllEquipments()` som kan returnere objektene lest inn fra fil. Du må selv finne ut hvilke klasser du må lage for å kunne representere ballene og bordtennisracketene.
+
+**Det er forventet at du benytter arv.**
 
 Du vil trenge denne metoden som returnerer objektene (lest fra fil) i neste oppgave.
 
@@ -84,17 +86,22 @@ Du vil trenge denne metoden som returnerer objektene (lest fra fil) i neste oppg
 
 Lag en klasse `Maintenance` som tilbyr tre public metoder:
 
-- `printBallsNeedingMoreAir`: Metoden skal skrive ut informasjon om hvilke baller som trenger å pumpes opp.
-- `printEquipmentNeedingToBeReplaced`: Metoden skal skrive ut informasjon om hvilket utstyr som må erstattes.
-- `printTableTennisRacketsNeedingNewPad`: Metoden skal skrive ut hvilke bordtennisracketer som må skifte belegg.
+- `printBallsNeedingMoreAir()`: Metoden skal skrive ut informasjon om hvilke baller som trenger å pumpes opp.
+- `printEquipmentNeedingToBeReplaced()`: Metoden skal skrive ut informasjon om hvilket utstyr som må erstattes.
+- `printTableTennisRacketsNeedingNewPad()`: Metoden skal skrive ut hvilke bordtennisracketer som må skifte belegg.
 
-Metodene skal bruke objektene lest inn fra fil for å utføre handlingen sin. Det er derfor forventet at du benytter klassen du lagde i oppgave 1 for å lese inn informasjon om utstyret før metodene kalles.
+Metodene skal bruke objektene lest inn fra fil for å utføre handlingen sin.
+
+**Det er forventet at du enten benytter aggregering.**
+
+Det er derfor forventet at du benytter klassen du lagde i oppgave 1 for å lese inn informasjon om utstyret før metodene kalles.
+
 
 ---
 
 ## Oppgave 3:
 
-Lag et program som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene beskrevet i oppgave 2.
+Lag en klasse `MaintenanceTest` med metoden `public void main()` som tester ut om klassen du lagde i oppgave 2 fungerer som tiltenkt. Programmet skal kalle på alle de tre metodene beskrevet i oppgave 2.
 
 ---
 
