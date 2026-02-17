@@ -84,9 +84,6 @@ Du vil trenge denne metoden som returnerer objektene (lest fra fil) i neste oppg
 
 ## Oppgave 2:
 
-
-## Oppgave 2:
-
 Lag en klasse `Maintenance` som tilbyr tre public metoder:
 
 - `printBallsNeedingMoreAir()`: Metoden skal skrive ut informasjon om hvilke baller som trenger å pumpes opp.
