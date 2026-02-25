@@ -216,63 +216,63 @@ public class TestAssignment extends BaseAssignment
             });
         }
 
-    @DisplayName("Oppgave #3 - test av oppretting av maintenance klasse og bruk av aggregering")
-    @Order(4)
-    @Test()
-    public void oppgave31() {
-        // Code that tests assignment goes here
+        @DisplayName("Oppgave #3 - test av  maintenance funksjonalitet")
+        @Order(4)
+        @Test()
+        public void oppgave31() {
+            // Code that tests assignment goes here
 
-        testClass(MTFQCN, () -> {
+            testClass(MTFQCN, () -> {
 
-            var nc = classCreateInstance();
+               var nc = classCreateInstance();
 
 
-            classInstanceInvokeMethod(nc, "main");
+               classInstanceInvokeMethod(nc, "main");
 
-            String sOut = "%s".formatted(
+               String sOut = "%s".formatted(
                                     getStandardOutput()
                                             .toLowerCase()
                                             .replaceAll("\\s+", ""));
 
-            var testText = "needmoreair";
-            assertTrue(sOut.contains(testText)
-            );
+               var testText = "needmoreair";
+               assertTrue(sOut.contains(testText)
+               );
 
-            String[] splitSO = sOut.split(testText);
+               String[] splitSO = sOut.split(testText);
 
-            testText = "volleyball21";
-            assertTrue(splitSO[0].contains(testText));
+               testText = "volleyball21";
+               assertTrue(splitSO[0].contains(testText));
 
-            testText = "needtobereplaced";
-            assertTrue(splitSO[1].contains(testText)
-            );
+               testText = "needtobereplaced";
+               assertTrue(splitSO[1].contains(testText)
+               );
 
-            String[] splitS1 = splitSO[1].split(testText);
+               String[] splitS1 = splitSO[1].split(testText);
 
-            testText = "basketball34";
-            assertTrue(splitS1[0].contains(testText));
+               testText = "basketball34";
+               assertTrue(splitS1[0].contains(testText));
 
-            testText = "tabletennisracket17";
-            assertTrue(splitS1[1].contains(testText));
+               testText = "tabletennisracket17";
+               assertTrue(splitS1[1].contains(testText));
 
-            testText = "neednewpad";
-            assertTrue(splitS1[1].contains(testText)
-            );
+               testText = "neednewpad";
+               assertTrue(splitS1[1].contains(testText)
+               );
 
 
 
-        });
-    }
-    static public void assertStandardOutputEqualsSpecial(String input) {
-      assertTrue(
+            });
+        }
+        static public void assertStandardOutputEqualsSpecial(String input) {
+            assertTrue(
                 "%s".formatted(
                         getStandardOutput()
                                 .toLowerCase()
                                 .replaceAll("\\s+", ""))
                                 .contains(input)
-                );
+            );
 
-    }
+        }
 
 
 

@@ -1,0 +1,66 @@
+name: Autograding Tests
+'on':
+  - push
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5.0.1
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5.1.0
+        with:
+          distribution: 'oracle'
+          java-version: '25'
+          cache: 'maven'
+      - name: OpprettingKlasserOgBrukAvArv
+        id: oppgave11
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: OpprettingKlasserOgBrukAvArv
+          setup-command: ''
+          command: mvn -Dtest=TestAssignment#oppgave11 test
+          timeout: 10
+          max-score: 30
+      - name: EkstraTestForArv
+        id: oppgave12
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: EkstraTestForArv
+          setup-command: ''
+          command: mvn -Dtest=TestAssignment#oppgave12 test
+          timeout: 10
+          max-score: 10
+      - name: MaintenanceOgAggregering
+        id: oppgave21
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: MaintenanceOgAggregering
+          setup-command: ''
+          command: mvn -Dtest=TestAssignment#oppgave21 test
+          timeout: 10
+          max-score: 30
+      - name: MaintenanceTest
+        id: oppgave31
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: MaintenanceTest
+          setup-command: ''
+          command: mvn -Dtest=TestAssignment#oppgave31 test
+          timeout: 10
+          max-score: 30
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          OPPGAVE11_RESULTS: "${{steps.oppgave11.outputs.result}}"
+          OPPGAVE12_RESULTS: "${{steps.oppgave12.outputs.result}}"
+          OPPGAVE21_RESULTS: "${{steps.oppgave21.outputs.result}}"
+          OPPGAVE31_RESULTS: "${{steps.oppgave31.outputs.result}}"
+        with:
+          runners: oppgave11,oppgave12,oppgave21,oppgave31
