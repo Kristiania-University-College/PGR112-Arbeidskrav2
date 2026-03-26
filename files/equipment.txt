@@ -61,7 +61,7 @@ TableTennisRacket
 17
 Locker 5
 true
-false
+true
 TableTennisRacket
 18
 Locker 5
