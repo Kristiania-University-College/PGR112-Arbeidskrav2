@@ -22,7 +22,7 @@ public class TestAssignment extends BaseAssignment
         static private final String BallFQCN = "assignment.Ball";
         static private final String TTRFQCN = "assignment.TableTennisRacket";
         static private final String VBFQCN = "assignment.Volleyball";
-        static private final String FBFQCN = "assignment.Fotball";
+        static private final String FBFQCN = "assignment.Football";
         static private final String HBFQCN = "assignment.Handball";
         static private final String BBFQCN = "assignment.Basketball";
         static private final String EquFQCN = "assignment.Equipment";
